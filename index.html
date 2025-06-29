@@ -5,37 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gyankendra</title>
   <style>
+    :root {
+      --c1: #c6e7ff;
+      --c2: #d4f6ff;
+      --c3: #fbfbfb;
+      --c4: #ffddae;
+      --text: #2c3e50;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    :root {
-      --c1: #c6e7ff;  /* light blue */
-      --c2: #d4f6ff;  /* pale cyan */
-      --c3: #fbfbfb;  /* light gray/white */
-      --c4: #ffddae;  /* soft peach */
-      --text: #2c3e50;
-    }
-
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, var(--c1), var(--c2), var(--c3));
       color: var(--text);
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
     }
 
     nav {
       background-color: var(--c3);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 999;
@@ -47,25 +46,55 @@
       color: var(--text);
     }
 
-    nav ul {
-      list-style: none;
+    .nav-links {
       display: flex;
       gap: 20px;
     }
 
-    nav ul li a {
-      color: var(--text);
+    .nav-links a {
       text-decoration: none;
+      color: var(--text);
       font-weight: 500;
       padding: 8px 16px;
       border-radius: 20px;
       transition: background-color 0.3s, color 0.3s;
     }
 
-    nav ul li a:hover {
+    .nav-links a:hover {
       background-color: var(--c4);
-      color: var(--text);
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      color: #000;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 26px;
+        color: var(--text);
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     .content {
@@ -80,7 +109,6 @@
     .content h1 {
       font-size: 38px;
       color: var(--text);
-      line-height: 1.4;
     }
 
     footer {
@@ -95,48 +123,34 @@
       color: var(--text);
       font-weight: bold;
     }
-
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav ul {
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 10px;
-      }
-      .content h1 {
-        font-size: 28px;
-      }
-      footer h2 {
-        font-size: 20px;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
   <nav>
     <div class="logo">Gyankendra</div>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Books</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Books</a>
+      <a href="#">Contact Us</a>
+    </div>
   </nav>
 
-  <!-- Content -->
   <div class="content">
     <h1>Welcome to Gyankendra – Your Gateway to Smarter Learning</h1>
   </div>
 
-  <!-- Footer -->
   <footer>
     <h2>Gyankendra</h2>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
 
 </body>
 </html>

@@ -1,27 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welcome to My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gyankendra</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f6f8;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --c1: #c6e7ff;  /* light blue */
+      --c2: #d4f6ff;  /* pale cyan */
+      --c3: #fbfbfb;  /* light gray/white */
+      --c4: #ffddae;  /* soft peach */
+      --text: #2c3e50;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, var(--c1), var(--c2), var(--c3));
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      background-color: var(--c3);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: var(--text);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: var(--c4);
+      color: var(--text);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .content {
+      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      text-align: center;
+      padding: 60px 20px;
     }
-    h1 {
-      color: #2c3e50;
-      font-size: 36px;
+
+    .content h1 {
+      font-size: 38px;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    footer {
+      background-color: var(--c3);
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    footer h2 {
+      font-size: 24px;
+      color: var(--text);
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 10px;
+      }
+      .content h1 {
+        font-size: 28px;
+      }
+      footer h2 {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to My Website</h1>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Gyankendra</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Books</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Content -->
+  <div class="content">
+    <h1>Welcome to Gyankendra – Your Gateway to Smarter Learning</h1>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <h2>Gyankendra</h2>
+  </footer>
+
 </body>
 </html>

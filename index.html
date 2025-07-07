@@ -3,16 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-<!-- Font Awesome CDN -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  integrity="sha512-pb3FnBDJ/t7r0C/5XxGC1OfOg5QGImM3qTnKZkjP3VGwFm3ZP1IG0DLCrKH1F1ZlxmjE2oX+Pxq5M5z8X0z+ag=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
   <title>Gyankendra</title>
   <style>
     :root {
@@ -133,156 +123,6 @@
       color: var(--text);
       font-weight: bold;
     }
-/* Fonts & reset */
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f0f4ff, #d9e8ff);
-    color: #222;
-    padding: 50px 20px;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  .container {
-    max-width: 1200px;
-    width: 100%;
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .card {
-    background: #ffffffcc;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 116, 218, 0.3);
-    flex: 1 1 320px;
-    max-width: 350px;
-    padding: 30px 25px 40px 25px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
-  }
-  /* Updated hover color and shadow */
-  .card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 30px 50px rgba(10, 132, 255, 0.7);
-    background: #0866f5;
-    color: #fff;
-  }
-  .icon {
-    font-size: 3rem;
-    color: #0a74da;
-    margin-bottom: 15px;
-    transition: color 0.4s ease;
-  }
-  .card:hover .icon {
-    color: #d0e5ff;
-  }
-  h2 {
-    font-weight: 600;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    position: relative;
-  }
-  h2::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 50px;
-    height: 4px;
-    background: #0a74da;
-    border-radius: 2px;
-    transition: background 0.4s ease;
-  }
-  .card:hover h2::after {
-    background: #d0e5ff;
-  }
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  /* List items as clickable links */
-  ul li {
-    margin-bottom: 12px;
-    font-size: 1.05rem;
-    position: relative;
-    padding-left: 30px;
-    transition: color 0.3s ease;
-  }
-  ul li a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: color 0.3s ease;
-    position: relative;
-    padding: 8px 12px;
-    border-radius: 8px;
-  }
-  ul li a:hover,
-  ul li a:focus {
-    background: rgba(255 255 255 / 0.15);
-    color: #cce4ff;
-    outline: none;
-    box-shadow: 0 0 10px rgba(255 255 255 / 0.7);
-  }
-  /* FontAwesome check icons as bullet */
-  ul li::before {
-    content: "\f058"; /* FontAwesome check-circle */
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #0a74da;
-    transition: color 0.4s ease;
-    font-size: 1.1rem;
-  }
-  .card:hover ul li::before {
-    color: #d0e5ff;
-  }
-  /* Slide-in animation for text on hover */
-  ul li a {
-    transform: translateX(0);
-    transition: transform 0.3s ease;
-  }
-  .card:hover ul li a {
-    transform: translateX(8px);
-  }
-
-  /* Responsive */
-  @media (max-width: 900px) {
-    .container {
-      justify-content: center;
-    }
-  }
-  @media (max-width: 480px) {
-    body {
-      padding: 30px 10px;
-    }
-    .card {
-      max-width: 100%;
-      padding: 25px 20px 30px 20px;
-    }
-    h2 {
-      font-size: 1.6rem;
-    }
-    ul li {
-      font-size: 1rem;
-    }
-    .icon {
-      font-size: 2.5rem;
-    }
-  }
-    
   </style>
 </head>
 <body>
@@ -297,44 +137,7 @@
       <a href="#">Contact Us</a>
     </div>
   </nav>
-<!-- --- यह है आपकी कंटेंट: तीन कॉलम वाला सेक्शन --- -->
-<div class="container">
-  <div class="card" id="admit-card" tabindex="0" aria-label="एडमिट कार्ड सेक्शन">
-    <div class="icon" aria-hidden="true"><i class="fas fa-id-card"></i></div>
-    <h2>एडमिट कार्ड</h2>
-    <ul>
-      <li><a href="#" tabindex="0">सरकारी एग्जाम एडमिट कार्ड डाउनलोड लिंक अपडेट</a></li>
-      <li><a href="#" tabindex="0">रोजाना नए एडमिट कार्ड की जानकारी</a></li>
-      <li><a href="#" tabindex="0">मोबाइल से आसानी से डाउनलोड करें</a></li>
-      <li><a href="#" tabindex="0">एडमिट कार्ड संबंधित महत्वपूर्ण नोटिस</a></li>
-      <li><a href="#" tabindex="0">मॉक टेस्ट और एडमिट कार्ड जानकारी</a></li>
-    </ul>
-  </div>
 
-  <div class="card" id="result" tabindex="0" aria-label="रिजल्ट सेक्शन">
-    <div class="icon" aria-hidden="true"><i class="fas fa-file-alt"></i></div>
-    <h2>रिजल्ट</h2>
-    <ul>
-      <li><a href="#" tabindex="0">हालिया सरकारी परीक्षा के रिजल्ट जारी</a></li>
-      <li><a href="#" tabindex="0">रिजल्ट की डायरेक्ट डाउनलोड लिंक</a></li>
-      <li><a href="#" tabindex="0">रैंक और कट ऑफ की जानकारी</a></li>
-      <li><a href="#" tabindex="0">रिजल्ट से जुड़ी नोटिफिकेशन</a></li>
-      <li><a href="#" tabindex="0">संपूर्ण रिजल्ट के लिए मार्गदर्शन</a></li>
-    </ul>
-  </div>
-
-  <div class="card" id="new-updates" tabindex="0" aria-label="न्यू अपडेट्स सेक्शन">
-    <div class="icon" aria-hidden="true"><i class="fas fa-bullhorn"></i></div>
-    <h2>न्यू अपडेट्स</h2>
-    <ul>
-      <li><a href="#" tabindex="0">सरकारी नौकरियों की ताज़ा खबरें</a></li>
-      <li><a href="#" tabindex="0">नए एग्जाम शेड्यूल और नोटिस</a></li>
-      <li><a href="#" tabindex="0">एडमिट कार्ड और रिजल्ट से जुड़ी समस्याएं</a></li>
-      <li><a href="#" tabindex="0">करियर गाइडेंस और टिप्स</a></li>
-      <li><a href="#" tabindex="0">अगले एग्जाम के लिए तैयारी टिप्स</a></li>
-    </ul>
-  </div>
-</div>
   <div class="content">
     <h1>Welcome to Gyankendra – Your Gateway to Smarter Learning</h1>
   </div>
